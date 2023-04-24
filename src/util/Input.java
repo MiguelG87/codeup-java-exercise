@@ -25,11 +25,11 @@ public class Input {
             return false;
         }
     }
-    public int setInt(int min, int max){
-        System.out.println("Please enter a number between " + min + "and " + max);
+    public int getInt(int min, int max){
+        System.out.println("Please enter a number between " + min + " and " + max);
         int userInput = scanner.nextInt();
         if(userInput < min || userInput > max){
-            return setInt(min, max);
+            return getInt(min, max);
         }
         return userInput;
     }
@@ -38,11 +38,11 @@ public class Input {
         int userInput = scanner.nextInt();
         return userInput;
     }
-    public double setDouble(double min, double max){
+    public double getDouble(double min, double max){
         System.out.println("Please enter a number between " + min + "and " + max);
         int userInput = scanner.nextInt();
         if(userInput < min || userInput > max){
-            return setDouble(min, max);
+            return getDouble(min, max);
         }
         return userInput;
     }
