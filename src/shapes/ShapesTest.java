@@ -5,7 +5,7 @@ public class ShapesTest{
         Measurable myShape;
         Square square = new Square(5);
         myShape = square;
-        System.out.println("Area of Square: " + myShape.getArea());
+        //System.out.println("Area of Square: " + myShape.getWidth());//10.) cant use .getWidth() since it doesn't exist within Measurable
         System.out.println("Perimeter of Square: " + myShape.getPerimeter());
         Rectangle box1 = new Rectangle(4,5);
         System.out.println("Area of Rectangle: " + box1.getArea());
