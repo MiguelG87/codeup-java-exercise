@@ -35,8 +35,13 @@ public class Input {
     }
     public int getInt(){
         System.out.println("Please enter a number: ");
-        int userInput = scanner.nextInt();
-        return userInput;
+        String stringVal = getString();
+        try{
+            return Integer.valueOf(stringVal);
+        }catch (NumberFormatException e) {
+            System.out.println("You had an invalid input, try again");
+            return getInt();
+        }
     }
     public double getDouble(double min, double max){
         System.out.println("Please enter a number between " + min + "and " + max);
@@ -48,7 +53,12 @@ public class Input {
     }
     public double getDouble(){
         System.out.println("Please enter a number: ");
-        double userInput = scanner.nextDouble();
-        return userInput;
+        String stringVal = getString();
+        try{
+            return Double.valueOf(stringVal);
+        }catch (NumberFormatException e) {
+            System.out.println("You had an invalid input, try again");
+            return getDouble();
+        }
     }
 }
